@@ -1,0 +1,10 @@
+# Site settings
+
+title: Bitorjs
+SEOTitle: Bitores的博客 | Bitores Blog
+header-img: img/home-bg-hill.jpg
+email: 773155801@qq.com
+description: "描述"
+keyword: "bitorjs"
+url: "https://bitorjs.github.io"
+baseurl: ""
