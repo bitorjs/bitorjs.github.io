@@ -1,8 +1,15 @@
 # bitorjs 官网
 > BitorJS 是一个新的、独立的 前端框架，但是，我更期望它是一个易扩展，方便使用的前端框架。
 
-### 优势
-> BitorJS 的优势在于，我们可以选择自己喜欢或擅长的 视力模板引擎（Vue or React）来进行项目开发，API 并不多，让开发者可以快速入门。
+### 特点
+
+- Bitorjs 简单、易学、易用，入门快。
+
+- 可以选择自己喜欢或擅长的视图模板引擎（Vue or React）来进行项目开发
+
+- 可以根据需要扩展视图模板的支持
+
+- 不使用 Vue 传统节点路由，而是使用 controller 注解来定义 项目的跳转路由，api请求路由
 
 - 自定义 项目文件的监听规则，使用后期可以自动进行批处理（如组件的自动注册，路由的自动注入等）。[参考配置](https://github.com/bitorjs/watcher)
 
@@ -10,7 +17,6 @@
 
 - 自定义 路由控制器，使用 Decorators 提供的注解方法。再也不用把 路由写在视图的标签节点上了，可以放心只写自己擅长的 页面视图就可以，路由的事，交于 控制器。
 
-- 快速创建 Vue 和 React 为视图模板的 项目。
 
 ### 目前框架解决了哪些问题
 
@@ -48,7 +54,7 @@
   - namespace 类注解
 
 
-- webpakcPlugin (bitorjs-watcher) 自定义项目文件监听 webpack 插件
+- webpackPlugin (bitorjs-watcher) 自定义项目文件监听 webpack 插件
   - root      项目文件监听根目录
   - cachefile 缓存文件名
   - rules     配置监听项目文件的规则
