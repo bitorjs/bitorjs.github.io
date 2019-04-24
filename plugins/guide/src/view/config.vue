@@ -26,10 +26,10 @@
       <li>production.config.js 生产环境启用</li>
     </ul>
     <h3>如何取得配置</h3>
-    <uo>
+    <ul>
       <li>app.$config</li>
       <li>this.ctx.$config</li>
-    </uo>
+    </ul>
   </div>
 </template>
 <script>

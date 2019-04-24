@@ -67,6 +67,7 @@ export default {
       background-color: #3eaf7c;
       padding: 0.8rem 1.6rem;
       border-radius: 4px;
+      cursor: pointer;
     }
   }
 

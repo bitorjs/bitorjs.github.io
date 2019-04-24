@@ -31,15 +31,15 @@
     </pre>
     <h2>注解说明</h2>
     <h3>路由注解 - 参数 String</h3>
-    <uo>
+    <ul>
       <li>Controller 类的注解</li>
       <li>Post 方法注解</li>
       <li>Get 方法注解</li>
-    </uo>
+    </ul>
     <h3>Middleware注解</h3>
-    <uo>
+    <ul>
       <li>参数有两种: String|Function</li>
-    </uo>
+    </ul>
   </div>
 </template>
 <script>
