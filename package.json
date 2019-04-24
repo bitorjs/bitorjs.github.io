@@ -16,9 +16,7 @@
     "push": "git add . && git commit -m 'update' && npm version patch && git push"
   },
   "dependencies": {
-    "ant-design-vue": "^1.3.7",
     "bitorjs": "0.0.6",
-    "canvas-exif-orientation": "^0.4.0",
     "highlight.js": "^9.15.6",
     "normalize.css": "^8.0.1",
     "object-assign": "^4.1.1",

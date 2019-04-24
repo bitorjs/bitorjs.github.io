@@ -5,14 +5,14 @@ import {
   Middleware
 } from 'bitorjs';
 
-import login from '../view/pages/login';
+import Index from '../view/pages';
 
 @Controller('/')
 export default class {
 
-  @Get('/login')
-  async login() {
+  @Get('/')
+  async Index() {
     sessionStorage.clear();
-    this.ctx.render(login, null)
+    this.ctx.render(Index, null)
   }
 }
