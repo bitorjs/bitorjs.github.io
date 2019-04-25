@@ -29,6 +29,11 @@ export default async (ctx, next) => {
           name: '插件开发',
           url: '/guide/plugin_dev',
           click
+        },
+        {
+          name: '解析过程',
+          url: '/guide/life',
+          click
         }
       ]
     },
