@@ -21,7 +21,7 @@ export default async (ctx, next) => {
           click
         },
         {
-          name: '全名要求',
+          name: '命名要求',
           url: '/guide/name',
           click
         },
