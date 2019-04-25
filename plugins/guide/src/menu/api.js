@@ -8,16 +8,21 @@ export default async (ctx, next) => {
   }
   ctx.$store.state.main.sideMenu = [
     {
-      name: '应用',
+      name: 'API',
       children: [
         {
-          name: 'API',
-          url: '/api',
+          name: 'app',
+          url: '/api/app',
           click
         },
         {
-          name: 'Install',
-          url: '/api/install',
+          name: 'context',
+          url: '/api/context',
+          click
+        },
+        {
+          name: 'vue中数据请求',
+          url: '/api/vue',
           click
         },
       ]

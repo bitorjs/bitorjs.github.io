@@ -19,6 +19,16 @@ export default async (ctx, next) => {
           name: '目录结构',
           url: '/guide/dir',
           click
+        },
+        {
+          name: '全名要求',
+          url: '/guide/name',
+          click
+        },
+        {
+          name: '插件开发',
+          url: '/guide/plugin_dev',
+          click
         }
       ]
     },
@@ -63,6 +73,11 @@ export default async (ctx, next) => {
         {
           name: '服务层',
           url: '/guide/service',
+          click
+        },
+        {
+          name: 'Mock层',
+          url: '/guide/mock',
           click
         },
         {

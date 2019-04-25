@@ -1,9 +1,9 @@
 <template>
   <div class="content-bitorjs">
-    <h1>服务层</h1>
+    <h1>Mock</h1>
     <pre v-highlight>
       <code class="js">
-      // service/login.js
+      // mock/login.js
       export default class {
         async register(params) {
           console.log(params)
@@ -21,9 +21,9 @@
       <strong style="color: red;">注意</strong> 文件名即为模块名,不可重复, 整个项目中唯一
     </p>
 
-    <h3>启用 service 层, 需要在配置文件中配置mock字段为false 或 不设置 mock字段</h3>
+    <h3>启用 Mock 层, 需要在配置文件中配置mock字段为true</h3>
 
-    <p>服务层主要用于放置 真实(浏览器Network调试面板中可以查看)的 请求 或 操作数据库部分的代码</p>
+    <p>Mock层主要用于在开发时模拟数据提供, 写法上同 serice</p>
     <h2>访问方式</h2>
     <h3>register</h3>
     <p>this.ctx.$service.login.register(params)</p>

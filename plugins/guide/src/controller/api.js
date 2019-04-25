@@ -4,18 +4,29 @@ import {
   Middleware
 } from 'bitorjs';
 import Menu from '../menu/api';
-import Index from '../view/index';
-import Install from '../view/install';
+import app from '../view/app';
+import context from '../view/context';
+import vue from '../view/vue';
 @Controller('/api')
 @Middleware(Menu)
 export default class {
   @Get('/')
   async index(ctx) {
-    ctx.render(Index)
+    ctx.app.redirect('/api/app')
   }
 
-  @Get('/install')
-  async install(ctx) {
-    ctx.render(Install)
+  @Get('/app')
+  async t(ctx) {
+    ctx.render(app)
+  }
+
+  @Get('/context')
+  async ctss(ctx) {
+    ctx.render(context)
+  }
+
+  @Get('/vue')
+  async tet(ctx) {
+    ctx.render(vue)
   }
 }

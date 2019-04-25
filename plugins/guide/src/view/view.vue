@@ -1,7 +1,21 @@
 <template>
   <div class="content-bitorjs">
     <h1>视图层</h1>
-    <p>暂时供 Vue 开发使用,无特殊处理</p>
+    <pre v-highlight>
+      <code class="html">
+        // view/xxx.vue
+        &lt;template&gt;
+          &lt;div&gt;
+          &lt;/div&gt;
+        &lt;/template&gt;
+        &lt;script&gt;
+        export default {
+          name: 'xxx';
+        };
+        &lt;/script&gt;
+      </code>
+    </pre>
+    <p>暂时供 Vue 开发使用,全名无特殊要求</p>
   </div>
 </template>
 <script>

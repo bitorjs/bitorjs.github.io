@@ -14,24 +14,26 @@
     <p>
       <strong style="color: red;">注意</strong> 文件名即为模块名,不可重复, 整个项目中唯一
     </p>
-
-    <div class="api">
-      <ul>
-        <li>$store 挂载到 ctx 上的</li>
-        <li>ctx.$store.state.模块名.key</li>
-      </ul>
-    </div>
-
-    <h2>访问方法</h2>
+    <p>
+      <strong>Vue中访问方式</strong> ctx.$store.state.模块名.key
+    </p>
+    <p>
+      <strong>Node中访问方式</strong> ctx.$store.模块名.get|set
+    </p>
+    <p>后期会统一两者写法</p>
+    <h2>VueJS</h2>
     <pre v-highlight>
       <code class="js">
-      let test = this.ctx.$store.state.main.test;
+      let test = this.ctx.$store.state.main.test; // 取值
+      this.ctx.$store.state.main.test = 2; // 存值
       </code>
     </pre>
-    <h2>存储方法</h2>
+    <h2>NodeJS</h2>
     <pre v-highlight>
       <code class="js">
-      this.ctx.$store.state.main.test = 2;
+      // 使用redis , Nodejs中如启用存储, 要在配置文件中配置 redis.enable 字段 为 true
+      let test = this.ctx.$store.main.get("test"); // 取值
+      this.ctx.$store.main.set("test", 2); // 存值
       </code>
     </pre>
   </div>
