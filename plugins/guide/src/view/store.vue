@@ -3,7 +3,7 @@
     <h1>数据存储访问</h1>
     <pre v-highlight>
       <code class="js">
-      // main.js
+      // store/main.js
       export default {
         state:{
           test: 1
@@ -11,6 +11,9 @@
       }
       </code>
     </pre>
+    <p>
+      <strong style="color: red;">注意</strong> 文件名即为模块名,不可重复, 整个项目中唯一
+    </p>
 
     <div class="api">
       <ul>

@@ -15,7 +15,7 @@
       </div>
       <div class="cell">
         <div class="title">高效</div>
-        <p>前后端统一的开发规范,让开发更高效</p>
+        <p>前后端统一的开发习惯,让开发更高效</p>
       </div>
     </div>
   </div>
@@ -65,7 +65,10 @@ export default {
       font-size: 1.2rem;
       color: #fff;
       background-color: #3eaf7c;
-      padding: 0.8rem 1.6rem;
+      width: 155px;
+      height: 50px;
+      line-height: 50px;
+      display: inline-block;
       border-radius: 4px;
       cursor: pointer;
     }

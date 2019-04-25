@@ -11,6 +11,7 @@
       }
       </code>
     </pre>
+    <p>暂时供 Vue 开发使用,无特殊处理</p>
   </div>
 </template>
 <script>

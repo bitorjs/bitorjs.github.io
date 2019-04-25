@@ -19,12 +19,7 @@ export default async (ctx, next) => {
           name: '目录结构',
           url: '/guide/dir',
           click
-        },
-        {
-          name: '自动化处绑定',
-          url: '/guide/auto',
-          click
-        },
+        }
       ]
     },
     {
@@ -71,6 +66,11 @@ export default async (ctx, next) => {
           click
         },
         {
+          name: '中间件',
+          url: '/guide/middleware',
+          click
+        },
+        {
           name: '公共组件',
           url: '/guide/component',
           click
@@ -80,11 +80,7 @@ export default async (ctx, next) => {
           url: '/guide/filter',
           click
         },
-        {
-          name: '中间件',
-          url: '/guide/middleware',
-          click
-        },
+
         {
           name: '视图层',
           url: '/guide/view',

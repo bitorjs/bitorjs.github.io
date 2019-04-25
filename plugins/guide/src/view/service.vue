@@ -18,10 +18,9 @@
       </code>
     </pre>
     <p>
-      <strong style="color:red;">注意</strong>服务层的代码放于
-      <strong>service</strong> 目录下, 自动挂载于
-      <strong>ctx.$service</strong>上, 键值是 文件名
+      <strong style="color: red;">注意</strong> 文件名即为模块名,不可重复, 整个项目中唯一
     </p>
+
     <p>服务层主要用于放置 真实(浏览器Network调试面板中可以查看)的 请求 或 操作数据库部分的代码</p>
     <h2>访问方式</h2>
     <h3>register</h3>
