@@ -1,6 +1,6 @@
 <template>
   <div class="content-bitorjs">
-    <h1>路由配置</h1>
+    <h1>路由</h1>
     <pre v-highlight>
       <code class="js">
       // controller/xxx.js
@@ -26,20 +26,38 @@
             ctx.render(res.default)
           })
         }
+
+        @Post('/users')
+        async getUsers(ctx) {
+          return ctx.$service.main.post('/users', ctx.body);
+        }
       }
       </code>
     </pre>
+
+    <h2>说明</h2>
+    <h3>组件渲染</h3>
+    <p>ctx.render(VueComponent[, props])</p>
+
+    <h3>路由参数获取</h3>
+    <p>ctx.params</p>
+    <p>如上图 :name 值的获取 ctx.params.name</p>
+
+    <h3>请求参数获取</h3>
+    <p>post请求: ctx.request.body</p>
+    <p>get请求: ctx.request.query</p>
+
     <h2>注解说明</h2>
     <h3>路由注解 - 参数 String</h3>
     <ul>
-      <li>Controller 类的注解</li>
-      <li>Post 方法注解</li>
-      <li>Get 方法注解</li>
+      <li>Controller(String)</li>
+      <li>Post(String)</li>
+      <li>Get(String)</li>
+      <li>Delete(String)</li>
+      <li>Put(String)</li>
     </ul>
-    <h3>Middleware注解</h3>
-    <ul>
-      <li>参数有两种: String|Function</li>
-    </ul>
+    <h3>中间件注解</h3>
+    <p>Middleware(String|Function)</p>
   </div>
 </template>
 <script>

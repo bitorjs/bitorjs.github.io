@@ -4,8 +4,7 @@ import {
   Middleware
 } from 'bitorjs';
 import Menu from '../menu/guide';
-import Index from '../view/index';
-import Install from '../view/install';
+import Index from '../view/guide/index';
 @Controller('/guide')
 @Middleware(Menu)
 export default class {
@@ -16,7 +15,7 @@ export default class {
 
   @Get('/:name')
   async install(ctx) {
-    import(`../view/${ctx.params.name}`).then(res => {
+    import(`../view/guide/${ctx.params.name}`).then(res => {
       ctx.render(res.default)
     })
   }

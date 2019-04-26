@@ -4,9 +4,9 @@ import {
   Middleware
 } from 'bitorjs';
 import Menu from '../menu/api';
-import app from '../view/app';
-import context from '../view/context';
-import vue from '../view/vue';
+import app from '../view/api/app';
+import context from '../view/api/context';
+import vue from '../view/api/vue';
 @Controller('/api')
 @Middleware(Menu)
 export default class {

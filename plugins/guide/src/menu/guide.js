@@ -51,16 +51,6 @@ export default async (ctx, next) => {
           click
         },
         {
-          name: '目录监听',
-          url: '/guide/watch',
-          click
-        },
-        {
-          name: '路由配置',
-          url: '/guide/controller',
-          click
-        },
-        {
           name: '项目配置',
           url: '/guide/config',
           click
@@ -71,7 +61,17 @@ export default async (ctx, next) => {
           click
         },
         {
-          name: '数据存储访问',
+          name: '目录监听',
+          url: '/guide/watch',
+          click
+        },
+        {
+          name: '路由',
+          url: '/guide/controller',
+          click
+        },
+        {
+          name: '存储访问',
           url: '/guide/store',
           click
         },

@@ -13,6 +13,14 @@ export default (app) => {
         app.redirect('/api')
       }
     })
+
+    app.ctx.$store.state.main.topMenu.push({
+      name: '常见问题',
+      click: () => {
+        app.redirect('/issue/a')
+      }
+    })
+
     app.ctx.$store.state.main.topMenu.push({
       name: '案例',
       click: () => {
