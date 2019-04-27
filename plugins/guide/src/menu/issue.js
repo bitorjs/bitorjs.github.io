@@ -11,17 +11,12 @@ export default async (ctx, next) => {
       name: '常见问题',
       children: [
         {
-          name: '有无脚手架',
+          name: '脚手架',
           url: '/issue/a',
           click
         },
         {
-          name: 'vue 项目使用 bitorjs',
-          url: '/issue/a',
-          click
-        },
-        {
-          name: 'webpack 打包 nodejs',
+          name: 'vue 使用 bitorjs',
           url: '/issue/b',
           click
         },
@@ -30,6 +25,11 @@ export default async (ctx, next) => {
           url: '/issue/c',
           click
         },
+        // {
+        //   name: 'webpack 打包 nodejs',
+        //   url: '/issue/d',
+        //   click
+        // },
 
       ]
     },

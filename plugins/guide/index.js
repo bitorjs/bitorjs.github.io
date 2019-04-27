@@ -7,12 +7,12 @@ export default (app) => {
       }
     })
 
-    app.ctx.$store.state.main.topMenu.push({
-      name: 'API',
-      click: () => {
-        app.redirect('/api')
-      }
-    })
+    // app.ctx.$store.state.main.topMenu.push({
+    //   name: 'API',
+    //   click: () => {
+    //     app.redirect('/api')
+    //   }
+    // })
 
     app.ctx.$store.state.main.topMenu.push({
       name: '常见问题',
