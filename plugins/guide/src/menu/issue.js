@@ -11,7 +11,12 @@ export default async (ctx, next) => {
       name: '常见问题',
       children: [
         {
-          name: '创建一个 vue 项目',
+          name: '有无脚手架',
+          url: '/issue/a',
+          click
+        },
+        {
+          name: 'vue 项目使用 bitorjs',
           url: '/issue/a',
           click
         },

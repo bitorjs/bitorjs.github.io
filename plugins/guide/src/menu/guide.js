@@ -25,11 +25,7 @@ export default async (ctx, next) => {
           url: '/guide/name',
           click
         },
-        {
-          name: '插件开发',
-          url: '/guide/plugin_dev',
-          click
-        },
+
         {
           name: '解析过程',
           url: '/guide/life',
@@ -47,17 +43,7 @@ export default async (ctx, next) => {
         },
         {
           name: '实例',
-          url: '/guide/instance',
-          click
-        },
-        {
-          name: '项目配置',
-          url: '/guide/config',
-          click
-        },
-        {
-          name: '插件配置',
-          url: '/guide/plugin',
+          url: '/guide/application',
           click
         },
         {
@@ -67,7 +53,7 @@ export default async (ctx, next) => {
         },
         {
           name: '路由',
-          url: '/guide/controller',
+          url: '/guide/router',
           click
         },
         {
@@ -104,6 +90,21 @@ export default async (ctx, next) => {
         {
           name: '视图层',
           url: '/guide/view',
+          click
+        },
+        {
+          name: '项目配置',
+          url: '/guide/config',
+          click
+        },
+        {
+          name: '插件配置',
+          url: '/guide/plugin',
+          click
+        },
+        {
+          name: '插件开发',
+          url: '/guide/plugin_dev',
           click
         },
       ]

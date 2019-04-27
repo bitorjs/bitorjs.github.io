@@ -6,6 +6,8 @@
       vue {
         // $post 获取应用实例
         // $get  获取上下文件
+        // $put 获取应用实例
+        // $delete  获取上下文件
       }
       </code>
     </pre>

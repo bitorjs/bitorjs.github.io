@@ -9,129 +9,94 @@
     </pre>
     <p>在 VueJS 和 NodeJS 项目开发时都可以以这种方式安装</p>
 
-    <h2>
-      配置参考 -
-      <a target="_blank" href="https://github.com/bitorjs/sass-site">[案例]</a>
-    </h2>
-    <h3>开发依赖</h3>
+    <h2>如何在 vue 中使用</h2>
+    <h3>创建 项目</h3>
+    <p>使用 vue 官方脚手架 vue-cli</p>
     <pre v-highlight>
-      <code class="json">
+      <code class="bash">
+      $ vue init webpack xxx
+      </code>
+    </pre>
+    <h3>安装依赖</h3>
+    <pre v-highlight>
+      <code class="bash">
+      $ npm install -S bitorjs
+      $ npm install -S vuex vuex-persist
+      $ npm install -D babel-plugin-transform-decorators-legacy
+
+
+      and add the following line to your .babelrc file:
       {
-        "@babel/core": "^7.4.0",
-        "@babel/plugin-proposal-class-properties": "^7.4.0",
-        "@babel/plugin-proposal-decorators": "^7.4.0",
-        "@babel/plugin-proposal-export-default-from": "^7.2.0",
-        "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
-        "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
-        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-        "@babel/plugin-syntax-export-namespace-from": "^7.2.0",
-        "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
-        "@babel/plugin-transform-spread": "^7.2.2",
-        "@babel/preset-env": "^7.4.2",
-        "babel-loader": "^8.0.5",
-        "webpack": "^4.29.6",
-        "webpack-cli": "^3.3.0",
-        "webpack-dev-server": "^3.2.1", // for vue
-        "webpack-merge": "^4.2.1",
-        "webpack-shell-plugin": "^0.5.0" // for node
+        "plugins": ["transform-decorators-legacy"]
       }
       </code>
     </pre>
-
-    <h3>babelrc</h3>
+    <h3>修改</h3>
+    <p>src/main.js</p>
     <pre v-highlight>
       <code class="js">
-      module.exports = {
-        "presets": [
-          [
-            "@babel/preset-env",
-            {
-              "targets": {
-                // for node
-                "node": "current",
-                // for vue
-                "browsers": [
-                  'last 2 Chrome versions', 'last 2 Safari versions', 'last 2 Firefox versions',
-                ]
-              },
+      // The Vue build version to load with the `import` command
+      // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+      import Vue from 'vue'
+      import Application from 'bitorjs';
+      import App from './App'
+      import router from './router'
 
-              "modules": 'commonjs',
-              "debug": true,
-              "useBuiltIns": false
-            }
-          ]
-        ],
-        "plugins": [
-          [
-            "@babel/plugin-proposal-decorators",
-            {
-              "legacy": true
-            }
-          ],
-          "@babel/plugin-proposal-export-default-from",
-          "@babel/plugin-proposal-export-namespace-from",
-          "@babel/plugin-syntax-export-namespace-from",
-          "@babel/plugin-syntax-dynamic-import",
-          "@babel/plugin-transform-spread",
-          "@babel/plugin-syntax-object-rest-spread",
-          ["@babel/plugin-proposal-object-rest-spread", {
-            "loose": true,
-            "useBuiltIns": true
-          }],
-          [
-            "@babel/plugin-proposal-class-properties",
-            {
-              "loose": true
-            }
-          ]
-        ]
-      }
+      Vue.config.productionTip = false
+
+      /* eslint-disable no-new */
+      // new Vue({
+      //   el: '#app',
+      //   router,
+      //   components: { App },
+      //   template: '<App/>'
+      // })
+      new Application({}, App, "#app").start(app => {
+        app.watch(require.context('../config', false, /\.js$/))
+        app.watch(require.context('.', true, /^((?!\/view\/).)+\.(vue|js)$/));
+      })
       </code>
     </pre>
-    <h3>webpack 部分配置 for node</h3>
+
+    <p>router/index.js</p>
     <pre v-highlight>
-      <code class="js">
-        const nodeModules = {
-          // "sequelize": "sequelize"
-        };
+      <code class="bash">
+      import {
+        Get,
+        Controller
+      } from 'bitorjs'
 
-        fs.readdirSync('node_modules')
-        .filter((catalogue) => {
-          return ['.bin', ...Object.keys(pkg['dependencies'])].indexOf(catalogue) === -1;
-        })
-        .forEach((mod) => {
-          nodeModules[mod] = 'commonjs ' + mod;
-        });
+      import HelloWorld from '@/components/HelloWorld'
 
-        // ...
-        
-        {
-          externals: nodeModules,
-          target: 'node',
-          node: {
-            console: true,
-            global: true,
-            process: true,
-            Buffer: true,
-            filename: true,
-            dirname: true,
-            setImmediate: true,
-            __filename: false,
-            __dirname: false
-          },
+      @Controller('/')
+      export default class {
+        @Get('/')
+        async index(ctx){
+          ctx.render(HelloWorld)
         }
+      }
 
-        // ... 
+      // import Vue from 'vue'
+      // import Router from 'vue-router'
 
-        // webpack plugin
-        new WebpackShellPlugin({
-          onBuildEnd: [
-            `npm run dev`
-          ]
-        })
-        
-      </code>
+
+      // Vue.use(Router)
+
+      // export default new Router({
+      //   routes: [
+      //     {
+      //       path: '/',
+      //       name: 'HelloWorld',
+      //       component: HelloWorld
+      //     }
+      //   ]
+      // })
+
+
+    </code>
     </pre>
+
+    <p>到此, 改造完毕, 接下来,你就可以 开启 bitorjs 之旅</p>
   </div>
 </template>
 <script>
