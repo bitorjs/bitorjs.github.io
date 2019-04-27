@@ -1,6 +1,6 @@
 {
   "name": "bitorjs.github.io",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "> BitorJS 统一了 Vue 和 Node 开发书写规则, 让前后端开发习惯无缝切换",
   "main": "index.js",
   "directories": {
