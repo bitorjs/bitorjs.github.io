@@ -53,7 +53,7 @@ export default async (ctx, next) => {
         },
         {
           name: '路由',
-          url: '/guide/router',
+          url: '/guide/routes',
           click
         },
         {

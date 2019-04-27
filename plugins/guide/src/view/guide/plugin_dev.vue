@@ -36,6 +36,8 @@
         }
         </code>
       </pre>
+      <li>插件要使用,必须要在主项目 plugin.env.js 配置文件中注册</li>
+      <li>插件可作为独门的 npm 包单独发布</li>
     </ul>
   </div>
 </template>

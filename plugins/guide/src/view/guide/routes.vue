@@ -3,9 +3,10 @@
     <h1>路由</h1>
     <pre v-highlight>
       <code class="js">
-      // controller/xxx.js 或 router/xxx.js
+      // controller/xxx.js 或 routes/xxx.js
       import {
         Get,
+        Post,
         Controller,
         Middleware
       } from 'bitorjs';
