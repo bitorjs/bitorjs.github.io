@@ -14,4 +14,6 @@ const client = (app) => {
   app.watch(require.context('./src', true, /^((?!\/view\/).)+\.(vue|js)$/));
 }
 
-new Application({}, main).start(client)
+new Application({
+  // mode: 'h5'
+}, main).start(client)

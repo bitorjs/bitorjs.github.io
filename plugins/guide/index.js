@@ -22,9 +22,16 @@ export default (app) => {
     })
 
     app.ctx.$store.state.main.topMenu.push({
+      name: '加入讨论',
+      click: () => {
+        app.redirect('/join')
+      }
+    })
+
+    app.ctx.$store.state.main.topMenu.push({
       name: '案例',
       click: () => {
-        window.location.href = 'https://github.com/bitorjs/sass-site'
+        window.location.href = 'https://github.com/bitorjs/saas-site'
       }
     })
     // github

@@ -15,21 +15,22 @@ export default async (ctx, next) => {
           url: '/issue/a',
           click
         },
+
         {
-          name: 'vue 使用 bitorjs',
+          name: 'babel 配置',
           url: '/issue/b',
           click
         },
         {
-          name: 'babel 配置',
+          name: 'vue 使用 bitorjs',
           url: '/issue/c',
           click
         },
-        // {
-        //   name: 'webpack 打包 nodejs',
-        //   url: '/issue/d',
-        //   click
-        // },
+        {
+          name: 'nodejs 使用 bitorjs',
+          url: '/issue/d',
+          click
+        },
 
       ]
     },

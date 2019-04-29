@@ -3,7 +3,7 @@
     <h1>插件配置</h1>
     <pre v-highlight>
       <code class="js">
-      // config/plugin.config.js
+      // config/plugin.env.js
       import axios from '../plugins/axios';
       import guide from '../plugins/guide';
 
