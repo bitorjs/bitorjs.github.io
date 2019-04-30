@@ -40,27 +40,27 @@
         <p>src/main.js</p>
       </li>
       <pre v-highlight>
-        <code class="js">
-        // The Vue build version to load with the `import` command
-        // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-        import Vue from 'vue'
-        import Application from 'bitorjs';
-        import App from './App'
-        // import router from './router'
+        <code class="js" v-pre>
+  // The Vue build version to load with the `import` command
+  // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+  import Vue from 'vue'
+  import Application from 'bitorjs';
+  import App from './App'
+  // import router from './router'
 
-        Vue.config.productionTip = false
+  Vue.config.productionTip = false
 
-        /* eslint-disable no-new */
-        // new Vue({
-        //   el: '#app',
-        //   router,
-        //   components: { App },
-        //   template: '<App/>'
-        // })
-        new Application({}, App, "#app").start(app => {
-          app.watch(require.context('../config', false, /\.js$/))
-          app.watch(require.context('.', true, /^((?!\/view\/).)+\.(vue|js)$/));
-        })
+  /* eslint-disable no-new */
+  // new Vue({
+  //   el: '#app',
+  //   router,
+  //   components: { App },
+  //   template: '<App/>'
+  // })
+  new Application({}, App, "#app").start(app => {
+    app.watch(require.context('../config', false, /\.js$/))
+    app.watch(require.context('.', true, /^((?!\/view\/).)+\.(vue|js)$/));
+  })
         </code>
       </pre>
       <li>
@@ -107,6 +107,6 @@
 </template>
 <script>
 export default {
-  name: ""
+  name: "install"
 };
 </script>

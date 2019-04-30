@@ -27,7 +27,9 @@
         })
       }
       // 新建一个应用实例
-      new Application({}, main).start(client)
+      new Application({
+        // mode: 'hash' 默认为 hash , [hash|history]
+      }, main).start(client)
       </code>
     </pre>
 

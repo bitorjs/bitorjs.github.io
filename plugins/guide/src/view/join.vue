@@ -4,14 +4,14 @@
     <p>有问题或新的需求点,可以通过以下方式联系</p>
     <h3>bitorjs QQ群: 995393294</h3>
     <h3>邮件: huangzhengjie@dingtalk.com</h3>
-    <h3>
-      直接提
+
+    <p>
       <a
-        href="https://github.com/bitorjs/bitorjs/issues"
+        href="http://github.com/bitorjs/bitorjs/issues"
         target="_blank"
         rel="noopener noreferrer"
-      >issue</a>
-    </h3>
+      >直接提issue</a>
+    </p>
   </div>
 </template>
 <script>

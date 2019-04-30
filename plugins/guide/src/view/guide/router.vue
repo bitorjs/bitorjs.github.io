@@ -1,9 +1,9 @@
 <template>
   <div class="content-bitorjs">
-    <h1>路由</h1>
+    <h1>路由|控制层</h1>
     <pre v-highlight>
       <code class="js">
-      // controller/xxx.js 或 routes/xxx.js
+      // controller/xxx.js 或 router/xxx.js
       import {
         Get,
         Post,
@@ -59,6 +59,10 @@
     </ul>
     <h3>中间件注解</h3>
     <p>Middleware(String|Function)</p>
+
+    <p>个人不喜欢 标签式 router 操作 及 json 式路由 配置, 自从发现如Java中注解式控制器后, 所以果断使用注解方式来完成路由功能</p>
+
+    <h3></h3>
   </div>
 </template>
 <script>

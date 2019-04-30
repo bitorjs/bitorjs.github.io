@@ -31,23 +31,15 @@
         <p>src/main.js</p>
       </li>
       <pre v-highlight>
-        <code class="js">
+        <code class="js" v-pre>
         // The Vue build version to load with the `import` command
         // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
         import Vue from 'vue'
         import Application from 'bitorjs';
         import App from './App'
-        // import router from './router'
 
         Vue.config.productionTip = false
 
-        /* eslint-disable no-new */
-        // new Vue({
-        //   el: '#app',
-        //   router,
-        //   components: { App },
-        //   template: '<App/>'
-        // })
         new Application({}, App, "#app").start(app => {
           app.watch(require.context('../config', false, /\.js$/))
           app.watch(require.context('.', true, /^((?!\/view\/).)+\.(vue|js)$/));
@@ -73,22 +65,6 @@
             ctx.render(HelloWorld)
           }
         }
-
-        // import Vue from 'vue'
-        // import Router from 'vue-router'
-
-
-        // Vue.use(Router)
-
-        // export default new Router({
-        //   routes: [
-        //     {
-        //       path: '/',
-        //       name: 'HelloWorld',
-        //       component: HelloWorld
-        //     }
-        //   ]
-        // })
         </code>
       </pre>
     </ol>

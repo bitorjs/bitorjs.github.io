@@ -52,8 +52,8 @@ export default async (ctx, next) => {
           click
         },
         {
-          name: '路由',
-          url: '/guide/routes',
+          name: '路由|控制层',
+          url: '/guide/router',
           click
         },
         {

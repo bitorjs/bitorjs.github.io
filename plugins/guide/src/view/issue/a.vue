@@ -5,5 +5,16 @@
   </div>
 </template>
 <script>
-export default {};
+class A {
+  name = "";
+  age = 1;
+}
+export default {
+  data() {
+    return new A();
+  },
+  mounted() {
+    console.log(this);
+  }
+};
 </script>

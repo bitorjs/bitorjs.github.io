@@ -15,7 +15,6 @@ export default async (ctx, next) => {
           url: '/issue/a',
           click
         },
-
         {
           name: 'babel 配置',
           url: '/issue/b',
@@ -27,11 +26,15 @@ export default async (ctx, next) => {
           click
         },
         {
-          name: 'nodejs 使用 bitorjs',
+          name: 'webpack 打包nodejs',
           url: '/issue/d',
           click
         },
-
+        {
+          name: 'nodejs 使用 bitorjs',
+          url: '/issue/e',
+          click
+        },
       ]
     },
   ]
