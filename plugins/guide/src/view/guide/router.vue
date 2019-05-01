@@ -30,7 +30,7 @@
 
         @Post('/users')
         async getUsers(ctx) {
-          return ctx.$service.main.post('/users', ctx.body);
+          ctx.body = ctx.$service.main.post('/users', ctx.request.body);
         }
       }
       </code>
@@ -47,6 +47,10 @@
     <h3>请求参数获取</h3>
     <p>post请求: ctx.request.body</p>
     <p>get请求: ctx.request.query</p>
+
+    <h3>数据返回</h3>
+    <p>ctx.body = xxx</p>
+    <p>控制层的数据返回统一使用 ctx.body 进行接收</p>
 
     <h2>注解说明</h2>
     <h3>路由注解 - 参数 String</h3>

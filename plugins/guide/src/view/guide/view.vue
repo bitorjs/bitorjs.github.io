@@ -21,6 +21,26 @@
       <strong>&lt;router-view&gt;&lt;/router-view&gt;</strong>
     </p>
     <p>暂时供 Vue 开发使用,全名无特殊要求</p>
+
+    <h2>视图层 与 存储层 | 控制层 交互</h2>
+    <ol>
+      <li>取 store</li>
+      <pre v-highlight>
+        <code class="html">
+        this.$store
+        </code>
+      </pre>
+      <li>请求数据</li>
+      <pre v-highlight>
+        <code class="html">
+        // 格式: this.$[方法名](url, data) : Promise
+        this.$get
+        this.$post
+        this.$delete
+        this.$put
+        </code>
+      </pre>
+    </ol>
   </div>
 </template>
 <script>

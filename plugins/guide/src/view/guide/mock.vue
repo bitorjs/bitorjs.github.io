@@ -1,6 +1,6 @@
 <template>
   <div class="content-bitorjs">
-    <h1>Mock</h1>
+    <h1>数据源|Mock</h1>
     <pre v-highlight>
       <code class="js">
       // mock/login.js

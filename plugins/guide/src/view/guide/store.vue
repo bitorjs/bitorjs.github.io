@@ -1,6 +1,6 @@
 <template>
   <div class="content-bitorjs">
-    <h1>数据存储访问</h1>
+    <h1>缓存|存储层</h1>
     <pre v-highlight>
       <code class="js">
       // store/main.js

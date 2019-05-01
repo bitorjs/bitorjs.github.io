@@ -4,7 +4,6 @@
     <pre v-highlight>
       <code class="js" v-pre>
 npm install -S bitorjs
-npm install -S koa
       </code>
     </pre>
     <ol>
@@ -40,6 +39,7 @@ new Application().start(app => {
 },1030)//  端口号,设置为1030
         </code>
       </pre>
+      <p>程序中可以使用 koa 中各种中间件</p>
       <li>
         <p>src/router/index.js</p>
       </li>

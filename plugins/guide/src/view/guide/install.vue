@@ -34,7 +34,7 @@
     <h3>修改</h3>
     <ol>
       <li>
-        <p>config/index.js 改为 config/index.env.js</p>
+        <p>新建 config/index.env.js</p>
       </li>
       <li>
         <p>src/main.js</p>

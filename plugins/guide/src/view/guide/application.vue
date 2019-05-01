@@ -1,6 +1,6 @@
 <template>
   <div class="content-bitorjs">
-    <h1>实例</h1>
+    <h1>应用实例</h1>
     <pre v-highlight>
       <code class="js">
       // index.js

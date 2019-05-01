@@ -1,6 +1,6 @@
 <template>
   <div class="content-bitorjs">
-    <h1>解析过程</h1>
+    <h1>启动过程</h1>
     <img src="/assets/life.png" alt srcset>
   </div>
 </template>

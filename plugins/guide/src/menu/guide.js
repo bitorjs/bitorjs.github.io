@@ -27,7 +27,7 @@ export default async (ctx, next) => {
         },
 
         {
-          name: '解析过程',
+          name: '启动过程',
           url: '/guide/life',
           click
         }
@@ -42,7 +42,7 @@ export default async (ctx, next) => {
           click
         },
         {
-          name: '实例',
+          name: '应用实例',
           url: '/guide/application',
           click
         },
@@ -57,17 +57,17 @@ export default async (ctx, next) => {
           click
         },
         {
-          name: '存储访问',
+          name: '缓存|存储层',
           url: '/guide/store',
           click
         },
         {
-          name: '服务层',
+          name: '数据源|服务层',
           url: '/guide/service',
           click
         },
         {
-          name: 'Mock层',
+          name: '数据源|Mock',
           url: '/guide/mock',
           click
         },
