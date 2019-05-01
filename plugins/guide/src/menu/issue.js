@@ -35,6 +35,11 @@ export default async (ctx, next) => {
           url: '/issue/e',
           click
         },
+        {
+          name: 'vue 使用 bitorjs(2)',
+          url: '/issue/f',
+          click
+        },
       ]
     },
   ]

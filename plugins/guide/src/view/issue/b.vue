@@ -21,6 +21,68 @@
       }
       </code>
     </pre>
+
+    <h3>参考配置</h3>
+    <pre v-highlight>
+      <code class="js">
+module.exports = {
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current",
+        },
+        "modules": 'commonjs',
+        debug: true,      
+        "useBuiltIns": false
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-export-namespace-from",
+    "@babel/plugin-syntax-export-namespace-from",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-spread",
+    "@babel/plugin-syntax-object-rest-spread",
+    ["@babel/plugin-proposal-object-rest-spread", {
+      "loose": true,
+      "useBuiltIns": true
+    }],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ]
+  ]
+}
+      </code>
+    </pre>
+
+    <h3>其它依赖</h3>
+    <p></p>
+    <ol>
+      <li>@babel/core</li>
+      <li>@babel/plugin-proposal-class-properties</li>
+      <li>@babel/plugin-proposal-decorators</li>
+      <li>@babel/plugin-proposal-export-default-from</li>
+      <li>@babel/plugin-proposal-export-namespace-from</li>
+      <li>@babel/plugin-proposal-object-rest-spread</li>
+      <li>@babel/plugin-syntax-dynamic-import</li>
+      <li>@babel/plugin-syntax-export-namespace-from</li>
+      <li>@babel/plugin-syntax-object-rest-spread</li>
+      <li>@babel/plugin-transform-spread</li>
+      <li>@babel/preset-env</li>
+      <li>babel-loader</li>
+    </ol>
   </div>
 </template>
 <script>
