@@ -41,7 +41,7 @@
 
     <h3>如何请求数据</h3>
     <pre v-highlight>
-      <code class="js" v-pre>
+      <code class="javascript" v-pre>
       // view/index.vue 
       // 1. 选择合适的方法向 控制层请求数据
       // 常用的方法 $get, $post, $delete, $put

@@ -93,11 +93,29 @@ html .vue-app a {
 </style>
 <style lang="less">
 .hljs {
-  // color: #f8f8f2 !important;
-  // background: #282c34 !important;
-  // background: transparent !important;
-  background: #f1f1f1 !important;
+  border: 0;
+  font-size: 12px;
+  display: block;
+  padding: 1px;
+  margin: 0;
+  width: 100%;
+  font-weight: 200;
+  // color: #333;
+  white-space: pre-wrap;
 }
+.hljs ol {
+  list-style: decimal;
+  margin: 0px 0px 0 40px !important;
+  padding: 0px;
+}
+.hljs ol li {
+  list-style: decimal-leading-zero;
+  border-left: 1px solid #464545 !important;
+  padding: 5px !important;
+  margin: 0 !important;
+  white-space: pre;
+}
+
 .content-bitorjs {
   position: relative;
   padding: 2.2em 0;
