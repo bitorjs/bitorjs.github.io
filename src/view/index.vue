@@ -100,7 +100,7 @@ html .vue-app a {
   margin: 0;
   width: 100%;
   font-weight: 200;
-  // color: #333;
+  color: #abb2bf;
   white-space: pre-wrap;
 }
 .hljs ol {

@@ -1,7 +1,8 @@
-var vConsolePlugin = require('vconsole-webpack-plugin'); 
+var vConsolePlugin = require('vconsole-webpack-plugin');
 const webpack = require('webpack');
 const WebpackMerge = require('webpack-merge');
 const base = require('./webpack.base');
+const Jarvis = require("webpack-jarvis");
 
 
 var path = require('path');
@@ -56,6 +57,9 @@ module.exports = WebpackMerge(base, {
     namedModules: true,
   },
   plugins: [
+    new Jarvis({
+      port: 1337 // optional: set a port
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         IS_DEV: true,
@@ -85,16 +89,16 @@ module.exports = WebpackMerge(base, {
         }
       },
     },
-    setup(app){
+    setup(app) {
       var express = require('express');
 
       var router = express.Router();
 
-      router.get('/user', function(req, res, next) {
+      router.get('/user', function (req, res, next) {
         res.send('this is bbbbbbbbbbbbbbbbbbbbbbbbbbbbb');
       });
 
-      router.post('/user', function(req, res, next) {
+      router.post('/user', function (req, res, next) {
         res.send('this is bbbbbbbbbbbbbbbbbbbbbbbbbbbbb');
       });
 
