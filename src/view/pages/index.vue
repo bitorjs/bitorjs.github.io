@@ -27,14 +27,6 @@ export default {
   data() {
     return {};
   },
-  mounted() {
-    setTimeout(() => {
-      console.log("1000", this);
-    }, 1000);
-    setTimeout(function() {
-      console.log("2000", this);
-    }, 2000);
-  },
   computed: {},
   methods: {
     guide() {

@@ -7,6 +7,7 @@ import Menu from '../menu/guide';
 import Index from '../view/guide/index';
 @Controller('/guide')
 @Middleware(Menu)
+@Middleware("cnzz")
 export default class {
   @Get('/')
   async index(ctx) {

@@ -40,6 +40,11 @@ export default async (ctx, next) => {
           url: '/issue/f',
           click
         },
+        {
+          name: 'vue 开发一个 插件',
+          url: '/issue/g',
+          click
+        },
       ]
     },
   ]

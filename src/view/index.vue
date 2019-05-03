@@ -47,9 +47,6 @@ export default {
       test: []
     };
   },
-  mounted() {
-    console.log(this.ctx.$store.state.main);
-  },
   methods: {
     toggle_aside() {
       this.full = !this.full;
