@@ -2,9 +2,14 @@ const htmlPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const autoprefixer = require('autoprefixer');
+var PrerenderSpaPlugin = require('prerender-spa-plugin')
 var path = require('path');
+var webpack = require('webpack');
 const cwd = process.cwd();
 const babel = require(path.join(cwd, '.babelrc.js'));
+// webpack-plugin-import-retry
+// webpack-retry-chunk-load-plugin
+// retry-ensure-webpack-plugin
 
 module.exports = {
   entry: {
@@ -17,6 +22,12 @@ module.exports = {
     chunkFilename: '[chunkhash].chunk.js'
   },
   plugins: [
+    new PrerenderSpaPlugin(
+      // Absolute path to compiled SPA
+      path.resolve(cwd, 'dist'),
+      // List of routes to prerender
+      ['/']
+    ),
     new htmlPlugin({
       filename: 'index.html',
       template: path.resolve(cwd, './public/index.html'),
@@ -50,8 +61,18 @@ module.exports = {
     rules: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: "babel-loader",
-      options: babel
+      use: [
+        // {
+        //   loader: 'cache-loader',
+        //   options: {
+        //     cacheDirectory: path.resolve('.cache')
+        //   }
+        // }, 
+        {
+          loader: "babel-loader",
+          options: babel
+        }]
+
     },
     {
       test: /\.vue$/,

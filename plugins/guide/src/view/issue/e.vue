@@ -4,6 +4,7 @@
     <pre v-highlight>
       <code class="js" v-pre>
 npm install -S bitorjs
+npm install -S koa
       </code>
     </pre>
     <ol>

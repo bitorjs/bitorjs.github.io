@@ -57,13 +57,15 @@ module.exports = WebpackMerge(base, {
     namedModules: true,
   },
   plugins: [
-    new Jarvis({
-      port: 1337 // optional: set a port
-    }),
+    // new Jarvis({
+    //   port: 1337 // optional: set a port
+    // }),
     new webpack.DefinePlugin({
       'process.env': {
         IS_DEV: true,
+        // BITOR_ENV: 'vue'
       },
+
     }),
     // new vConsolePlugin({
     //   filter: [],  // 需要过滤的入口文件

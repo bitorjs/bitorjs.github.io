@@ -1,5 +1,5 @@
 <template>
-  <div class="vue-app">
+  <div id="root" class="vue-app">
     <div class="app-container">
       <div class="app-header">
         <div class="app-logo"></div>
